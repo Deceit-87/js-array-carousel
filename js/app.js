@@ -21,3 +21,17 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
+
+
+
+
+const containerDivElement = document.getElementsByClassName("container")
+
+for (let i = 0; i < title.length; i++){
+    const divElement = document.createElement('div');
+    const imgElement = `<img src="${items[i]}">`;
+    divElement.classList.add(title[i]) ;
+    divElement.innerHTML = imgElement ;
+    containerDivElement.append(divElement);
+
+}

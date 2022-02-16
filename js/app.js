@@ -25,13 +25,16 @@ const text = [
 
 
 
-const containerDivElement = document.getElementsByClassName("container")
+const containerDivElement = document.getElementById("container")
 
 for (let i = 0; i < title.length; i++){
     const divElement = document.createElement('div');
     const imgElement = `<img src="${items[i]}">`;
-    divElement.classList.add(title[i]) ;
     divElement.innerHTML = imgElement ;
+
+
+
+    
     containerDivElement.append(divElement);
 
 }

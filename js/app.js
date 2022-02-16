@@ -30,8 +30,11 @@ const containerDivElement = document.getElementsByClassName("container")[0];
 
 for (let i = 0; i < items.length; i++) {
     const divElement = document.createElement('div') ;
-    const divContent = `<h3>${title[i]}</h3><img src="${items[i]}">`
+    const imgElement = document.createElement('img')
+    const divTitle = `<h3>${title[i]}</h3><p> ${text[i]} </p> `
     divElement.classList.add(title[i])
-    divElement.innerHTML = divContent;
-    containerDivElement.append(divElement)   ; 
+    imgElement.src = items[i];
+    divElement.innerHTML = divTitle;
+    containerDivElement.append(divElement)   ;
+    divElement.append(imgElement) 
 }

@@ -32,9 +32,12 @@ for (let i = 0; i < items.length; i++) {
     const divElement = document.createElement('div') ;
     const imgElement = document.createElement('img')
     const divTitle = `<h3>${title[i]}</h3><p> ${text[i]} </p> `
-    divElement.classList.add(title[i])
+  
     imgElement.src = items[i];
+    
+    containerDivElement.append(divElement);
     divElement.innerHTML = divTitle;
-    containerDivElement.append(divElement)   ;
     divElement.append(imgElement) 
+    divElement.classList.add(title[i])
+    
 }

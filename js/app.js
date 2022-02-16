@@ -9,7 +9,7 @@ const items = [
 const title = [
     'Svezia',
     'Svizzera',
-    'Gran Bretagna',
+    'Gran-Bretagna',
     'Germania',
     'Paradise'
 ]
@@ -25,16 +25,13 @@ const text = [
 
 
 
-const containerDivElement = document.getElementById("container")
-
-for (let i = 0; i < title.length; i++){
-    const divElement = document.createElement('div');
-    const imgElement = `<img src="${items[i]}">`;
-    divElement.innerHTML = imgElement ;
+const containerDivElement = document.getElementsByClassName("container")[0];
 
 
-
-    
-    containerDivElement.append(divElement);
-
+for (let i = 0; i < items.length; i++) {
+    const divElement = document.createElement('div') ;
+    const divContent = `<h3>${title[i]}</h3><img src="${items[i]}">`
+    divElement.classList.add(title[i])
+    divElement.innerHTML = divContent;
+    containerDivElement.append(divElement)   ; 
 }
